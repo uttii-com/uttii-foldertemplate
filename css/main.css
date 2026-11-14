@@ -1,0 +1,17 @@
+/**
+ * FolderTemplate styles
+ */
+#ft-toolbar-create-btn,
+button#ft-toolbar-create-btn,
+.ft-toolbar-btn {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
