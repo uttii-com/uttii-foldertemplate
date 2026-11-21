@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>foldertemplate</id>
+    <name>uttii-FolderTemplate</name>
+    <summary lang="en">Turn any folder into a dynamic template and duplicate the latest structure in one click.</summary>
+    <summary lang="ja">既存フォルダを動的テンプレート化し、最新構成をワンクリックで複製作成。</summary>
+    <description lang="en">Create standardized project folders in seconds instead of copying structures manually. **uttii-FolderTemplate** turns any existing folder into a live, dynamic template tracked by Nextcloud's internal `fileId`.
+
+- **Always Up-to-Date**: Updates to the source folder are automatically reflected whenever you create a new folder from the template.
+- **Move &amp; Rename Resilient**: Tracks the template source by `fileId`, so it keeps working even if you rename or move the original folder.
+- **No Duplicate Template Snapshots**: Registering a template stores only a lightweight reference without duplicating the source folder on the server (newly created folders use normal storage).
+- **Safe One-Click Creation**: Launch directly from the `+ New` menu with automatic duplicate numbering (e.g. `Folder (2)`) and Personal Settings management (EN/JA).</description>
+    <description lang="ja">毎回の手作業コピーなしで、定型プロジェクトフォルダを数秒で作成できます。**uttii-FolderTemplate** は、既存フォルダを Nextcloud 内部の `fileId` で追跡する動的テンプレートとして登録します。
+
+- **常に最新内容を反映**：元フォルダを更新すると、それ以降に生成されるフォルダへ自動的に最新構成が反映されます。
+- **移動・リネームに強い**：`fileId` ベースで参照するため、元フォルダの名前変更や移動を行ってもテンプレートが壊れません。
+- **テンプレート保持の追加容量ゼロ**：スナップショットを二重保存せず参照のみを保持します（※生成された複製フォルダ自体は通常容量を使用します）。
+- **ワンクリック作成＆重複防止**：「＋ 新規作成」メニューから即座に作成でき、`Folder (2)` の自動連番で上書きを防止。個人設定で一覧管理・日英切替も可能です。</description>
+    <version>0.2.0</version>
+    <licence>AGPL-3.0-or-later</licence>
+    <author mail="info@uttii.com" homepage="https://uttii.com/">uttii.com</author>
+    <website>https://app-nextcloud.uttii.com/</website>
+    <repository type="git">https://github.com/uttii-com/uttii-foldertemplate.git</repository>
+    <bugs>https://github.com/uttii-com/uttii-foldertemplate/issues</bugs>
+    <screenshot>https://raw.githubusercontent.com/uttii-com/uttii-foldertemplate/main/screenshots/main.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/uttii-com/uttii-foldertemplate/main/screenshots/ui.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/uttii-com/uttii-foldertemplate/main/screenshots/settings.png</screenshot>
+    <namespace>FolderTemplate</namespace>
+    <category>files</category>
+    <dependencies>
+        <nextcloud min-version="28" max-version="35" />
+    </dependencies>
+    <settings>
+        <personal>OCA\FolderTemplate\Settings\PersonalSettings</personal>
+        <personal-section>OCA\FolderTemplate\Settings\PersonalSection</personal-section>
+    </settings>
+</info>
